@@ -2,10 +2,11 @@ import {FileHandle} from "./FileHandle";
 
 export class Post{
   private static lastId = 0;
-  private _id: number;
+  private _id!: number;
   private _textareaContent!: string;
     private _imagesUploads: FileHandle[] = [];
-    private _date:Date;
+    private _date!:Date;
+    /*
 constructor( imagesUploads: FileHandle[] = [],
             textareaContent: string,
             date:Date) {
@@ -13,7 +14,7 @@ constructor( imagesUploads: FileHandle[] = [],
   this._textareaContent=textareaContent;
   this.imagesUploads = [...imagesUploads];
   this._date=date;
-}
+}*/
 
 
   get id(): number {

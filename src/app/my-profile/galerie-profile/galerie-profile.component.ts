@@ -19,8 +19,11 @@ export class GalerieProfileComponent implements OnInit {
       this.n+=this.posts[i].imagesUploads.length ;
     }
   }
-  imgpost(post:Post):SafeUrl{
-    return post.imagesUploads[0].url;
+  imgpost(post:Post):any{
+    if(post.imagesUploads.length!==0)
+      return post.imagesUploads[0].url;
+    else
+      return null;
   }
 
 

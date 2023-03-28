@@ -6,7 +6,9 @@
               grid-template-columns: repeat(3, 1fr);">
         <div *ngFor="let post of posts" style=" display: grid;
                                           grid-template-columns: repeat(3, 1fr); " >
-            <img [src]="imgpost(post)" class="post-img">
+            <div *ngIf="imgpost(post)!==null">
+                <img [src]="imgpost(post)" class="post-img">
+            </div>
         </div>
     </div>
 

@@ -12,6 +12,7 @@ import {Comment} from "../../models/Comment";
 })
 export class PostProfileComponent implements OnInit {
   posts:Post[]=this.servicepost.getPosts();
+
   comment!:string;
   comments: Comment[] = [];
 
@@ -25,7 +26,9 @@ export class PostProfileComponent implements OnInit {
   constructor(private servicepost:PostService) { }
 
   ngOnInit(): void {
+    console.log(this.posts)
   }
+
 
 
 }

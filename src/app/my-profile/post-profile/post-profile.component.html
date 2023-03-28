@@ -14,9 +14,12 @@
         </div>
     </div>
     <p class="post-text">{{post.textareaContent}} </p>
-    <div *ngFor="let file of post.imagesUploads;" >
-        <img [src]="file.url" class="post-img">
+    <div *ngIf="post.imagesUploads.length!==0">
+        <div *ngFor="let file of post.imagesUploads;" >
+            <img [src]="file.url" class="post-img">
+        </div>
     </div>
+
     <div class="post-row">
         <div class="activity-icons">
             <div> <img src="assets/imgs/profile/like.png" >180</div>
@@ -31,7 +34,7 @@
     <div class="post-comment">
         <img src="assets/imgs/profile/imageprofile.png">
         <textarea name="" id="" cols="30" rows="10" placeholder="Écrivez un commentaire" (input)="onComment($event)" >{{this.comment}}</textarea>
-        <img src="assets/imgs/profile/paper-plane.png" (click)="create(post.id)">
+        <img src="assets/imgs/profile/paper-plane.png" style="cursor: pointer" (click)="create(post.id)">
     </div>
     <div   *ngFor="let comment of comments">
             <span *ngIf="comment.idPost==post.id" class="post-comment-container">
