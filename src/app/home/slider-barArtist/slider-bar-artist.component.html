@@ -1,0 +1,29 @@
+<div class="slide-container">
+    <span class="slider-span1" id="slider-span1"></span>
+    <div class="image-slider">
+        <div class="slides-div" id="slide-1">
+            <img [src]="ims[0]" alt="" class="img" id="img1">
+            <a (click)="changeimg(0)" href="#slider-span1" class="button" id="button-1"></a>
+        </div>
+        <div class="slides-div" id="slide-2">
+            <img [src]="ims[1]" alt="" class="img" id="img2">
+            <a (click)="changeimg(1)" href="#slider-span1"  class="button" id="button-2"></a>
+        </div>
+        <div class="slides-div" id="slide-3" >
+            <img [src]="ims[2]" alt="" class="img" id="img3">
+            <a href="#slider-span1" (click)="changeimg(2)" class="button" id="button-3"></a>
+            <figcaption *ngIf="this.press">
+                <h3> En savoir plus </h3>
+            </figcaption>
+        </div>
+        <div class="slides-div" id="slide-4">
+            <img [src]="ims[3]" alt="" class="img" id="img4">
+            <a (click)="changeimg(3)" href="#slider-span1"  class="button" id="button-4"></a>
+        </div>
+        <div class="slides-div" id="slide-5">
+            <img [src]="ims[4]" alt="" class="img" id="img5">
+            <a (click)="changeimg(4)" href="#slider-span1" class="button" id="button-5"></a>
+        </div>
+    </div>
+    <a href="#" style="text-decoration:auto;font-size:1.5em;margin-top: 500px;margin-left: 80%;  font-weight: bold;color: #000;">Voir plus d'articles > </a>
+</div>

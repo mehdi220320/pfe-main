@@ -1,0 +1,30 @@
+.profile-photo{
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+.profile-photo a{
+    color:#1876f2;
+    text-decoration: none;
+}
+.profile-photo a h3{
+    font-weight: bold;
+    margin-bottom: 0px;
+
+}
+.profile-photo img{
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+}
+.profile-photo hr{
+    border: 0;
+    height: 2px;
+    background: #ccc;
+    margin:10px 0;
+}
+.profile-photo p{
+    margin-top: 5px;
+    font-size: 14px;
+}

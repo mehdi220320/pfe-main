@@ -1,0 +1,48 @@
+<section class="section-bar">
+    <div class="slider">
+        <div class="slide">
+            <input (click)="slideTo(1)" type="radio" name="radio-btn" id="radio1" #radio1>
+            <input (click)="slideTo(2)" type="radio" name="radio-btn" id="radio2" #radio2>
+            <input (click)="slideTo(3)" type="radio" name="radio-btn" id="radio3" #radio3>
+            <div class="st first" style="background:#f2eff1 ">
+                <div class="content" style="background:#f2eff1 ;border: solid #f2eff1 3px; border-radius: 5px;;width: 60%;" >
+                    <h1>Upcycling Art</h1>
+                    <h3>Redonner vie aux déchets en les transformant en œuvres d'art</h3>
+                    <button class="apropos"> Connexion </button>
+                </div>
+                <img src="../../../assets/imgs/sliderbar/apropos.png" style="width: 40%"></div>
+            <div class="st" style="background:#000000">
+                <img src="../../../assets/imgs/sliderbar/artist.png" style="width: 40%">
+                <div class="content" style="background:#000000 ; color: #f2eff1; width: 60%;" >
+                    <h1 style="margin-top:10%;">Des trésors cachés dans vos déchets</h1>
+                    <button class="button-benefits">  Rejoindre-nous </button>
+                </div>				</div>
+            <div class="st" style="background: #e2caae;">
+                <div class="image" style="width: 40%;">
+                    <img src="../../../assets/imgs/2502606-removebg-preview.png" style="width:80%;margin-left:10%;" >
+                </div>
+                <div class=" content" style="background: #e2caae;width: 60%;">
+                    <h1 style="margin-top:10%;">Transformez vos déchets en trésors</h1>
+                    <button class="button-benefits-user"> Devenir un artiste </button>
+
+                </div>
+
+            </div>
+
+            <div class="nav-auto">
+                <div class="a-b1"></div>
+                <div class="a-b2"></div>
+                <div class="a-b3"></div>
+            </div>
+
+        </div>
+        <div class="nav-m">
+            <label for="radio1" class="m-btn"></label>
+            <label for="radio2" class="m-btn"></label>
+            <label for="radio3" class="m-btn"></label>
+        </div>
+        <button  class="slider-btn prev"><img  (click)="prevSlide()" src="../../../assets/imgs/sliderbar/right.png" ></button>
+        <button  class="slider-btn next"><img  (click)="nextSlide()" src="../../../assets/imgs/sliderbar/right.png" ></button>
+    </div>
+</section>
+

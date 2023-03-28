@@ -1,0 +1,28 @@
+<div class="write-post">
+    <div class="user-profile">
+        <img src="assets/imgs/profile/imageprofile.png" alt="">
+        <div>
+            <p>Username</p>
+            <small> <img src="assets/imgs/profile/planet-earth.png" style="width: 10px; height: 10px;">Public </small>
+
+        </div>
+    </div>
+    <div class="input-post">
+        <textarea rows="3" placeholder="What's on your mind?? "  (input)="onTextareaChange($event)">{{this.textareaContent}}</textarea>
+        <div class="add-post-links">
+            <button type="button" onclick="document.getElementById('pictureUpload').click()">
+                <img src="assets/imgs/profile/appareil-photo-numerique.png" >Photo/Video</button>
+            <input type="file" multiple (change)="onFileSelected($event)" id="pictureUpload" style="display: none;" >
+            <button type="button" (click)="create()" style="margin-left:65%;">
+                Create <img src="/assets/imgs/profile/paper-plane.png">
+            </button>
+        </div>
+        <div class="add-img-post">
+            <div *ngFor="let file of imagesUploads;let i =index;" >
+                <span  (click)="removeImages(i)">X</span>
+                <img [src]="file.url" style="height: 100%;width: 100%;">
+            </div>
+        </div>
+
+    </div>
+</div>
