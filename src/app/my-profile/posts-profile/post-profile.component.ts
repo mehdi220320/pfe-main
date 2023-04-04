@@ -6,7 +6,7 @@ import {PostService} from "../../service/post.service";
 import {Comment} from "../../models/Comment";
 
 @Component({
-  selector: 'app-post-profile',
+  selector: 'app-posts-profile',
   templateUrl: './post-profile.component.html',
   styleUrls: ['./post-profile.component.css']
 })

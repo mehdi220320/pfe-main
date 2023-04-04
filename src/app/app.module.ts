@@ -18,10 +18,10 @@ import { CountDownComponent } from './verify-code/count-down/count-down.componen
 import { HomeComponent } from './home/home.component';
 import { HeadComponent } from './head/head.component';
 import { ContactComponent } from './contact/contact.component';
-import {Router, RouterModule} from "@angular/router";
+import { RouterModule} from "@angular/router";
 import { AproposProfileComponent } from './my-profile/apropos-profile/apropos-profile.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
-import { PostProfileComponent } from './my-profile/post-profile/post-profile.component';
+import { PostProfileComponent } from './my-profile/posts-profile/post-profile.component';
 import { GalerieProfileComponent } from './my-profile/galerie-profile/galerie-profile.component';
 import { CreatePostComponent } from './my-profile/create-post/create-post.component';
 import { TopProfileComponent } from './my-profile/top-profile/top-profile.component';
@@ -31,7 +31,10 @@ import { SliderBarUserComponent } from './home/slider-bar-user/slider-bar-user.c
 import { SliderBar2Component } from './home/slider-bar2/slider-bar2.component';
 import { SliderBarArtistComponent } from './home/slider-barArtist/slider-bar-artist.component';
 import { AproposComponent } from './apropos/apropos.component';
-
+import { GallerieComponent } from './my-profile/gallerie/gallerie.component';
+import { BottomProfileComponent } from './my-profile/bottom-profile/bottom-profile.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { PostComponent } from './my-profile/post/post.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +61,9 @@ import { AproposComponent } from './apropos/apropos.component';
     SliderBar2Component,
     SliderBarArtistComponent,
     AproposComponent,
+    GallerieComponent,
+    BottomProfileComponent,
+    PostComponent,
   ],
     imports: [
         BrowserModule,
@@ -68,6 +74,7 @@ import { AproposComponent } from './apropos/apropos.component';
         MatIconModule,
         RouterModule,
         ReactiveFormsModule,
+        MatDialogModule
 
     ],
   providers: [],

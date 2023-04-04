@@ -13,17 +13,12 @@ import {PostService} from "../../service/post.service";
 export class GalerieProfileComponent implements OnInit {
   n!:number;
   posts:Post[]=this.servicepost.getPosts();
+  images:SafeUrl[]=this.servicepost.getImages();
   constructor(private servicepost:PostService) { }
   ngOnInit(): void {
     for(let i=0;i<this.posts.length;i++){
       this.n+=this.posts[i].imagesUploads.length ;
     }
-  }
-  imgpost(post:Post):any{
-    if(post.imagesUploads.length!==0)
-      return post.imagesUploads[0].url;
-    else
-      return null;
   }
 
 

@@ -39,7 +39,8 @@
 .add-post-links{
     display: flex;
     margin-top: 10px;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-between;
     color:#626262;
     margin-left: 30px;
     font-size: 13px;

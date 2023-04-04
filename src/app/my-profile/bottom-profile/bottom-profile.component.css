@@ -1,0 +1,12 @@
+.profile-info{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.info-col{
+    flex-basis: 33%;
+}
+.info-post{
+    flex-basis: 65%;
+}

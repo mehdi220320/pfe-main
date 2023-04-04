@@ -1,8 +1,7 @@
 .profile-container{
-  padding: 20px 15%;
   color: #626262;
   background: #EEEEEE;
-
+  padding: 85px 15% 150px;
 }
 .cover-img {
   width:100%;
@@ -17,6 +16,28 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+}
+.profile-nav{
+  background: #fff;
+  list-style-type: none;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  padding-top: 5px;
+  margin-top: 15px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+.profile-nav li{
+  float: left;
+}
+.profile-nav li a{
+  display: block;
+  color: #666;
+  text-align: center;
+  padding-left: 9px;
+  padding-top: 7px;
+  text-decoration: none;
 }
 .pd-row{
   display: flex;
@@ -74,7 +95,7 @@
 .profile-info{
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   margin-top: 20px;
 }
 .info-col{

@@ -9,11 +9,11 @@ import {SignupArtistComponent} from "./signup-artist/signup-artist.component";
 import {SignupComponent} from "./signup/signup.component";
 import {VerifyCodeComponent} from "./verify-code/verify-code.component";
 import {HomeComponent} from "./home/home.component";
-import {HeadComponent} from "./head/head.component";
 import {ContactComponent} from "./contact/contact.component";
-import {AuthGuardVerify} from "./auth/auth-verify.guard";
 import {MyProfileComponent} from "./my-profile/my-profile.component";
 import {AproposComponent} from "./apropos/apropos.component";
+import {GallerieComponent} from "./my-profile/gallerie/gallerie.component";
+import {BottomProfileComponent} from "./my-profile/bottom-profile/bottom-profile.component";
 
 const routes: Routes = [
   {path: 'homeuser', component: SimpleUserComponent,canActivate:[AuthGuard],data:{roles:['User']}},
@@ -27,8 +27,16 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: '', component: HomeComponent},
   {path: 'contact', component: ContactComponent},
-  {path: 'myprofile', component: MyProfileComponent},
-  {path: 'apropos', component:AproposComponent}
+  {path: 'apropos', component:AproposComponent},
+  {
+    path: 'myprofile',
+    component: MyProfileComponent,
+    children: [
+      { path: 'gallery', redirectTo: 'myprofile', pathMatch: 'full' },
+      {path: 'posts', component:BottomProfileComponent},
+      {path: 'gallery', component:GallerieComponent},
+    ]
+  }
 ];
 
 @NgModule({

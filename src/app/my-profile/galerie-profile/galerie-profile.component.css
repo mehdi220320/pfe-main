@@ -13,11 +13,6 @@
     margin-bottom: 0px;
 
 }
-.profile-photo img{
-    width: 100px;
-    height: 100px;
-    border-radius: 6px;
-}
 .profile-photo hr{
     border: 0;
     height: 2px;
@@ -27,4 +22,14 @@
 .profile-photo p{
     margin-top: 5px;
     font-size: 14px;
+}
+.imgs{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.imgs img{
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+    margin-bottom:2px;
 }

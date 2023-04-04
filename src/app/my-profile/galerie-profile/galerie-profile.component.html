@@ -2,13 +2,9 @@
     <a href=""><h3>Galeries</h3> </a>
     <p>{{posts.length}} publications </p>
     <hr>
-    <div style="display: grid;
-              grid-template-columns: repeat(3, 1fr);">
-        <div *ngFor="let post of posts" style=" display: grid;
-                                          grid-template-columns: repeat(3, 1fr); " >
-            <div *ngIf="imgpost(post)!==null">
-                <img [src]="imgpost(post)" class="post-img">
-            </div>
+    <div class="imgs">
+        <div *ngFor="let image of images | slice:0:9" >
+            <img    [src]="image" >
         </div>
     </div>
 
