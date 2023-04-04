@@ -65,6 +65,9 @@ import { PostComponent } from './my-profile/post/post.component'
     BottomProfileComponent,
     PostComponent,
   ],
+    entryComponents:[
+        PostComponent
+    ],
     imports: [
         BrowserModule,
         AppRoutingModule,
@@ -74,8 +77,7 @@ import { PostComponent } from './my-profile/post/post.component'
         MatIconModule,
         RouterModule,
         ReactiveFormsModule,
-        MatDialogModule
-
+        MatDialogModule,
     ],
   providers: [],
   bootstrap: [AppComponent]

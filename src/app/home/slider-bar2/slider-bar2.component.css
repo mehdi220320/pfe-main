@@ -167,9 +167,8 @@
     border: transparent;
 
 }
-.image img{
-    animation: bounce 2s infinite;
-}
+
+
 @keyframes bounce {
     0% {
         transform: translateY(0);
@@ -180,4 +179,22 @@
     100% {
         transform: translateY(0);
     }
+}
+.content1{
+    background:#f2eff1 ;border: solid #f2eff1 3px; border-radius: 5px;;width: 60%;
+}
+.st1{background:#f2eff1;}
+.st1 img{width: 40%;}
+.st2{background:#000000;}
+.st2 img{width: 40%}
+.content2{background:#000000 ; color: #f2eff1; width: 60%;}
+.content2 h1{margin-top:10%;}
+.st3{background: #e2caae;}
+.content3{background: #e2caae;width: 60%;}
+.content3 h1{margin-top:10%;}
+.image{width: 40%;}
+.image img{
+    width:80%;
+    margin-left:10%;
+    animation: bounce 2s infinite;
 }

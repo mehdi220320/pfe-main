@@ -1,0 +1,138 @@
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+.user-profile img{
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.user-profile p {
+    margin-bottom: -5px;
+    font-weight: 500;
+
+}
+.user-profile small {
+    font-size: 12px;
+    padding: 0%;
+}
+.post-container {
+    width:100%;
+    background: #fff;
+    border-radius: 6px;
+    padding: 12px;
+    color:#626262;
+    margin-bottom: 20px;
+
+}
+.user-profile span{
+    font-size: 13px;
+    color:#9a9a9a;
+}
+.post-text{
+    margin: 15px 0;
+    font-size: 15px;
+    color: black;
+    font-family: ui-sans-serif;
+}
+.post-text a{
+    color:#1876f2;
+    text-decoration: none;
+}
+.post-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+.post-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.activity-icons div img{
+    width:18px;
+    margin-right: 10px;
+}
+.activity-icons div{
+    display: inline-flex;
+    align-items: center;
+    margin-right: 30px;
+    font-size: 15px;
+}
+.post-profile-icons{
+    display: flex;
+    align-items: center;
+}
+.post-profile-icons img{
+    width: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.navbar{
+    max-width: 100%;
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    columns: #626262;
+}
+.post-comment{
+    display: flex;
+    align-items: center;
+}
+.hr-post {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin:10px auto;
+    width: 90%;
+}
+.post-comment img{
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.post-comment textarea{
+    width: 100%;
+    height: 40px;
+    border:0 ;
+    outline:0;
+    border-bottom:1px solid #ccc;
+    background: transparent;
+    resize:none;
+    padding: 10px;
+    overflow: hidden;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+}
+.post-comment img:last-child{
+    width: 30px;
+}
+.post-comment-container{
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+}
+.post-comment-container img{
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.post-comment-container div{
+    background: #f0f2f5;
+    border-radius: 10px;
+    padding: 10px;
+}
+.post-comment-container div p{
+    font-size: 15px;
+    color: #000;
+    margin:auto;
+}
+.post-comment-container  p{
+    font-size: 12px;
+    margin: auto 1px;
+}
+.afficher-plus{
+    color:#1876f2;
+    text-decoration: underline;
+}
