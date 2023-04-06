@@ -14,6 +14,7 @@ import {MyProfileComponent} from "./my-profile/my-profile.component";
 import {AproposComponent} from "./apropos/apropos.component";
 import {GallerieComponent} from "./my-profile/gallerie/gallerie.component";
 import {BottomProfileComponent} from "./my-profile/bottom-profile/bottom-profile.component";
+import { DialogContentExample } from './dialog/dialog-content-example';
 
 const routes: Routes = [
   {path: 'homeuser', component: SimpleUserComponent,canActivate:[AuthGuard],data:{roles:['User']}},
@@ -28,6 +29,8 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'apropos', component:AproposComponent},
+  {path: 'ssss', component:DialogContentExample},
+
   {
     path: 'myprofile',
     component: MyProfileComponent,

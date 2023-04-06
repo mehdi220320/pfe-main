@@ -1,10 +1,31 @@
 <div class="gallery-container">
     <h2> Gallery </h2>
     <hr>
-    <div class="grid-wrapper"  >
-        <div *ngFor="let image of images">
-            <img [src]="image"  >
+    <div *ngIf="images.length>2" class="grid-wrapper"  >
+        <div *ngFor="let image of images" >
+            <img [src]="image.url" (click)="postRequired(image.id)" style="cursor:pointer;" data-toggle="modal" data-target="#image" >
         </div>
     </div>
-    <button (click)="openDialog()">openpopup</button>
+    <div *ngIf="images.length===1" class="grid-wrapper"  >
+        <div *ngFor="let image of images" class="big">
+            <img [src]="image.url" (click)="postRequired(image.id)" style="cursor:pointer;" data-toggle="modal" data-target="#image" >
+        </div>
+    </div>
+    <div *ngIf="images.length===2" class="grid-wrapper"  >
+        <div *ngFor="let image of images" class="tall">
+            <img [src]="image.url" (click)="postRequired(image.id)" style="cursor:pointer;" data-toggle="modal" data-target="#image" >
+        </div>
+    </div>
 </div>
+        <!-- Modal -->
+        <div class="modal fade" id="image" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" style="width: 75%;margin-top:56px;" role="document">
+                <div class="modal-content">
+                    <div class="modal-body" >
+                        <app-post [post]="post"> </app-post>
+                        <button type="button" class=" close" data-dismiss="modal"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal -->

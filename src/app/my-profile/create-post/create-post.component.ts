@@ -38,11 +38,14 @@ export class CreatePostComponent implements OnInit {
   removeImages(i: number){
     this.imagesUploads.splice(i,1);
   }
+  idPost=0;
   create() {
     //const post = new Post(this.imagesUploads, this.textareaContent, new Date());
 
     this.post.textareaContent=this.textareaContent;
     this.post.date=new Date();
+    this.post.id=this.idPost+1;
+    this.idPost++;
     for(let i=0;i<this.imagesUploads.length;i++){
       this.post.imagesUploads.push(this.imagesUploads[i]);
     }

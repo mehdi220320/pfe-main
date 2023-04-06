@@ -21,7 +21,6 @@ img{
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
-
 }
 .grid-wrapper{
     display: grid;
@@ -38,8 +37,8 @@ img{
     grid-row: span 2;
 }
 .grid-wrapper .big{
-    grid-row: span 2;
-    grid-column: span 2;
+    grid-row: span 3;
+    grid-column: span 3;
 
 }
 
@@ -53,4 +52,40 @@ hr{
     height: 2px;
     width: 40%;
     box-shadow: 0px -2px 1px;;
+}
+@media (min-width: 576px){
+    .modal-dialog {
+        max-width: 100%;
+    }
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 2px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    background:#000;
+    border-radius:10px;
+}
+.close:hover {
+    opacity: 1;
+}
+.close:before, .close:after {
+    position: absolute;
+    left: 14px;
+    top: 3px;
+    padding: 2px;
+    content: ' ';
+    height: 25px;
+    width: 2px;
+    background-color: #333;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
 }

@@ -1,1 +1,52 @@
-<h1>hellllllllo</h1>
+<div class="post-container">
+    <div style="width:60%">
+        <img [src]="post.imagesUploads[0].url" style="width:99%;height:100%;border-top-right-radius:20px 20px" alt="">
+    </div>
+    <div style="width:40%">
+        <div class="user-profile">
+            <img src="assets/imgs/profile/imageprofile.png" alt="">
+            <div>
+                <p>Username</p>
+                <span> {{post.date.toLocaleDateString('en-US', {year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit'
+                }).replace(',', '')}}</span>
+            </div>
+        </div>
+        <p class="post-text">{{post.textareaContent}} </p>
+        <div class="post-row">
+            <div class="activity-icons">
+                <div> <img src="assets/imgs/profile/like.png" >180</div>
+                <div> <img src="assets/imgs/profile/comment.png" >75</div>
+                <div> <img src="assets/imgs/profile/view.png" >1,5000</div>
+            </div>
+            <div class="post-profile-icons">
+                <img src="assets/imgs/profile/imageprofile.png" alt="">
+            </div>
+        </div>
+        <hr class="hr-post">
+        <div class="post-comment">
+            <img src="assets/imgs/profile/imageprofile.png">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Écrivez un commentaire" (input)="onComment($event)"  required>{{this.comment}}</textarea>
+            <img src="assets/imgs/profile/paper-plane.png" style="cursor: pointer" (click)="create(post.id)">
+        </div>
+        <div   *ngFor="let comment of comments">
+            <span *ngIf="comment.idPost===post.id" class="post-comment-container">
+                   <img src="assets/imgs/profile/imageprofile.png" >
+                  <div>
+                    <p>{{comment.comment}}</p>
+                  </div><p>{{comment.date.toLocaleDateString('en-US', {year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            }).replace(',', '')}}</p>
+            </span>
+        </div>
+        <a class="afficher-plus" >Afficher plus des commentaires</a>
+    </div>
+</div>

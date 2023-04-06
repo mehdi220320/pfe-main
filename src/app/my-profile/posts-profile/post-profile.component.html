@@ -33,11 +33,11 @@
     <hr class="hr-post">
     <div class="post-comment">
         <img src="assets/imgs/profile/imageprofile.png">
-        <textarea name="" id="" cols="30" rows="10" placeholder="Écrivez un commentaire" (input)="onComment($event)" >{{this.comment}}</textarea>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Écrivez un commentaire" (input)="onComment($event)"  required>{{this.comment}}</textarea>
         <img src="assets/imgs/profile/paper-plane.png" style="cursor: pointer" (click)="create(post.id)">
     </div>
     <div   *ngFor="let comment of comments">
-            <span *ngIf="comment.idPost==post.id" class="post-comment-container">
+            <span *ngIf="comment.idPost===post.id" class="post-comment-container">
                    <img src="assets/imgs/profile/imageprofile.png" >
                   <div>
                     <p>{{comment.comment}}</p>

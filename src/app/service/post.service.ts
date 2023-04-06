@@ -1,29 +1,45 @@
 import { Injectable } from '@angular/core';
 import { Post } from '../models/Post';
 import {SafeUrl} from "@angular/platform-browser";
+import {Comment} from "../models/Comment";
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
-  images:SafeUrl[]=[];
+  private images:Image[]=[];
   posts: Post[] = [];
-  constructor() { }
+  constructor() {}
+  j=0;
   getPosts(): Post[] {
     return this.posts;
   }
-  getImages(): SafeUrl[]{
+  getImages(): Image[]{
     return this.images;
   }
   addPost(post: Post): void {
     for(let i=0;i<post.imagesUploads.length;i++)
     {
-      this.images.push(post.imagesUploads[i].url);
+      const url=post.imagesUploads[i].url;
+      const id=this.j;
+      this.images.push({url,id});
     }
+    this.j++;
     this.posts.push(post);
   }
   removePost(index: number) {
     this.posts.splice(index, 1);
   }
+  comments: Comment[] = [];
+  addComment(comment:Comment){
+    this.comments.push(comment);
+  }
+  getComments(){
+    return this.comments;
+  }
+}
+export interface Image{
+  url: SafeUrl;
+  id: number;
 }

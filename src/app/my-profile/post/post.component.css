@@ -136,3 +136,12 @@
     color:#1876f2;
     text-decoration: underline;
 }
+.post-container{
+    width: 100%;
+    height: 600px;
+    margin:0;
+    scroll-snap-align: start;
+    object-fit:cover;
+    padding:0;
+    display: flex;
+}

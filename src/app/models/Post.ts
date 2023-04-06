@@ -1,7 +1,6 @@
 import {FileHandle} from "./FileHandle";
 
 export class Post{
-  private static lastId = 0;
   private _id!: number;
   private _textareaContent!: string;
     private _imagesUploads: FileHandle[] = [];

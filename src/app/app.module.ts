@@ -34,9 +34,12 @@ import { AproposComponent } from './apropos/apropos.component';
 import { GallerieComponent } from './my-profile/gallerie/gallerie.component';
 import { BottomProfileComponent } from './my-profile/bottom-profile/bottom-profile.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { PostComponent } from './my-profile/post/post.component'
+import { PostComponent } from './my-profile/post/post.component';
+import {DialogContentExample, DialogContentExampleDialog} from './dialog/dialog-content-example'
 @NgModule({
   declarations: [
+      DialogContentExample,
+      DialogContentExampleDialog,
     AppComponent,
     ForbiddenComponent,
     LoginComponent,
@@ -63,11 +66,8 @@ import { PostComponent } from './my-profile/post/post.component'
     AproposComponent,
     GallerieComponent,
     BottomProfileComponent,
-    PostComponent,
+    PostComponent
   ],
-    entryComponents:[
-        PostComponent
-    ],
     imports: [
         BrowserModule,
         AppRoutingModule,
@@ -77,7 +77,8 @@ import { PostComponent } from './my-profile/post/post.component'
         MatIconModule,
         RouterModule,
         ReactiveFormsModule,
-        MatDialogModule,
+        MatDialogModule
+
     ],
   providers: [],
   bootstrap: [AppComponent]

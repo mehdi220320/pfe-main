@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="input-post">
-        <textarea rows="3" placeholder="What's on your mind?? "  (input)="onTextareaChange($event)">{{this.textareaContent}}</textarea>
+        <textarea rows="3" placeholder="What's on your mind?? "  (input)="onTextareaChange($event)" required>{{this.textareaContent}}</textarea>
         <div class="add-post-links">
             <button type="button" onclick="document.getElementById('pictureUpload').click()">
                 <img src="assets/imgs/profile/appareil-photo-numerique.png" >Photo/Video</button>

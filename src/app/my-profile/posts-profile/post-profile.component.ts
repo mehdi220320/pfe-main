@@ -14,15 +14,21 @@ export class PostProfileComponent implements OnInit {
   posts:Post[]=this.servicepost.getPosts();
 
   comment!:string;
-  comments: Comment[] = [];
+  comments=this.servicepost.getComments();
 
   onComment(event: Event) {
     this.comment = (event.target as HTMLInputElement).value;
   }
   create(id:number){
-    this.comments.push(new Comment(this.comment,new Date(),id));
+    this.servicepost.addComment(new Comment(this.comment,new Date(),id));
     this.comment='';
+    for(let i=0;i<this.posts.length;i++) {
+      console.log("post id :" +this.posts[i].id);
+    }
   }
+
+
+
   constructor(private servicepost:PostService) { }
 
   ngOnInit(): void {
