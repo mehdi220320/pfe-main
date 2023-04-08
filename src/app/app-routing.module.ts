@@ -29,8 +29,6 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'apropos', component:AproposComponent},
-  {path: 'ssss', component:DialogContentExample},
-
   {
     path: 'myprofile',
     component: MyProfileComponent,

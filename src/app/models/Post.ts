@@ -5,7 +5,16 @@ export class Post{
   private _textareaContent!: string;
     private _imagesUploads: FileHandle[] = [];
     private _date!:Date;
-    /*
+    private _likes!:number;
+  get likes(): number {
+    return this._likes;
+  }
+
+  set likes(value: number) {
+    this._likes = value;
+  }
+
+  /*
 constructor( imagesUploads: FileHandle[] = [],
             textareaContent: string,
             date:Date) {

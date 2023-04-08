@@ -136,3 +136,20 @@
     color:#1876f2;
     text-decoration: underline;
 }
+.button {
+    display: flex;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+}
+
+
+.button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}

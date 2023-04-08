@@ -19,7 +19,7 @@
         <p class="post-text">{{post.textareaContent}} </p>
         <div class="post-row">
             <div class="activity-icons">
-                <div> <img src="assets/imgs/profile/like.png" >180</div>
+                <div> <button class="button"><img src="assets/imgs/profile/like.png" (click)="addLike(post.id)"  style="cursor: pointer"  ></button>{{post.likes}} </div>
                 <div> <img src="assets/imgs/profile/comment.png" >75</div>
                 <div> <img src="assets/imgs/profile/view.png" >1,5000</div>
             </div>
@@ -31,7 +31,7 @@
         <div class="post-comment">
             <img src="assets/imgs/profile/imageprofile.png">
             <textarea name="" id="" cols="30" rows="10" placeholder="Écrivez un commentaire" (input)="onComment($event)"  required>{{this.comment}}</textarea>
-            <img src="assets/imgs/profile/paper-plane.png" style="cursor: pointer" (click)="create(post.id)">
+            <button class="button"><img src="assets/imgs/profile/paper-plane.png" style="cursor: pointer" (click)="create(post.id)"></button>
         </div>
         <div   *ngFor="let comment of comments">
             <span *ngIf="comment.idPost===post.id" class="post-comment-container">

@@ -28,9 +28,11 @@ export class PostComponent {
       console.log("post id :" +this.posts[i].id);
     }
   }
-
+  addLike(id:number){
+    this.servicepost.addLike(id);
+    console.log(id);
+  }
 
   ngOnInit(){
-    this.post.date
   }
 }

@@ -22,13 +22,12 @@ export class PostProfileComponent implements OnInit {
   create(id:number){
     this.servicepost.addComment(new Comment(this.comment,new Date(),id));
     this.comment='';
-    for(let i=0;i<this.posts.length;i++) {
-      console.log("post id :" +this.posts[i].id);
-    }
   }
 
-
-
+  addLike(id:number){
+    this.servicepost.addLike(id);
+    console.log(id);
+  }
   constructor(private servicepost:PostService) { }
 
   ngOnInit(): void {

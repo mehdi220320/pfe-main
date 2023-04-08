@@ -27,9 +27,7 @@ export class CreatePostComponent implements OnInit {
         const reader = new FileReader();
         reader.onload = (e: any) => {
           const url = this.sanitizer.bypassSecurityTrustUrl(e.target.result);
-          console.log(url);
           this.imagesUploads.push({ file, url });
-          console.log(this.imagesUploads);
         };
         reader.readAsDataURL(file);
       }
@@ -40,24 +38,18 @@ export class CreatePostComponent implements OnInit {
   }
   idPost=0;
   create() {
-    //const post = new Post(this.imagesUploads, this.textareaContent, new Date());
-
     this.post.textareaContent=this.textareaContent;
     this.post.date=new Date();
     this.post.id=this.idPost+1;
+    this.post.likes=0;
     this.idPost++;
     for(let i=0;i<this.imagesUploads.length;i++){
       this.post.imagesUploads.push(this.imagesUploads[i]);
     }
-    //this.post.imagesUploads=this.imagesUploads;
-    console.log(this.post.imagesUploads.length)
-    console.log(this.post.imagesUploads)
     this.postService.addPost(this.post);
     this.post=new Post();
     this.imagesUploads.splice(0,this.imagesUploads.length);
     this.textareaContent = '';
-    console.log(this.postService.getPosts())
-
   }
 }
 
