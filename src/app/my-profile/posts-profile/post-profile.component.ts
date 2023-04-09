@@ -12,7 +12,8 @@ import {Comment} from "../../models/Comment";
 })
 export class PostProfileComponent implements OnInit {
   posts:Post[]=this.servicepost.getPosts();
-
+   i = 1;
+   dynamicId = "slide" + this.i;
   comment!:string;
   comments=this.servicepost.getComments();
 
@@ -29,7 +30,6 @@ export class PostProfileComponent implements OnInit {
     console.log(id);
   }
   constructor(private servicepost:PostService) { }
-
   ngOnInit(): void {
     console.log(this.posts)
   }

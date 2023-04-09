@@ -162,3 +162,8 @@
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
+.scroll-div{
+    height: 63%;
+    overflow: hidden;
+    overflow-y: auto;
+}

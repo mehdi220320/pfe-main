@@ -33,19 +33,21 @@
             <textarea name="" id="" cols="30" rows="10" placeholder="Écrivez un commentaire" (input)="onComment($event)"  required>{{this.comment}}</textarea>
             <button class="button"><img src="assets/imgs/profile/paper-plane.png" style="cursor: pointer" (click)="create(post.id)"></button>
         </div>
-        <div   *ngFor="let comment of comments">
-            <span *ngIf="comment.idPost===post.id" class="post-comment-container">
-                   <img src="assets/imgs/profile/imageprofile.png" >
-                  <div>
-                    <p>{{comment.comment}}</p>
-                  </div><p>{{comment.date.toLocaleDateString('en-US', {year: 'numeric',
-                month: '2-digit',
-                day: '2-digit',
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit'
-            }).replace(',', '')}}</p>
-            </span>
+        <div class="scroll-div">
+            <div   *ngFor="let comment of comments">
+                <span *ngIf="comment.idPost===post.id" class="post-comment-container">
+                       <img src="assets/imgs/profile/imageprofile.png" >
+                      <div>
+                        <p>{{comment.comment}}</p>
+                      </div><p>{{comment.date.toLocaleDateString('en-US', {year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit'
+                }).replace(',', '')}}</p>
+                </span>
+            </div>
         </div>
         <a class="afficher-plus" >Afficher plus des commentaires</a>
     </div>
