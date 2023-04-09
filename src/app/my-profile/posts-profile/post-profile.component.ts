@@ -16,6 +16,11 @@ export class PostProfileComponent implements OnInit {
    dynamicId = "slide" + this.i;
   comment!:string;
   comments=this.servicepost.getComments();
+  constructor(private servicepost:PostService) { }
+  ngOnInit(): void {
+    console.log(this.posts)
+  }
+
 
   onComment(event: Event) {
     this.comment = (event.target as HTMLInputElement).value;
@@ -29,11 +34,10 @@ export class PostProfileComponent implements OnInit {
     this.servicepost.addLike(id);
     console.log(id);
   }
-  constructor(private servicepost:PostService) { }
-  ngOnInit(): void {
-    console.log(this.posts)
+  counterValue!: number;
+  slideTo(i: number):void{
+    this.counterValue=i;
   }
-
 
 
 }

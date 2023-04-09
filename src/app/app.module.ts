@@ -36,6 +36,7 @@ import { BottomProfileComponent } from './my-profile/bottom-profile/bottom-profi
 import { MatDialogModule } from '@angular/material/dialog';
 import { PostComponent } from './my-profile/post/post.component';
 import {DialogContentExample, DialogContentExampleDialog} from './dialog/dialog-content-example'
+import {MatSliderModule} from '@angular/material/slider';
 @NgModule({
   declarations: [
       DialogContentExample,
@@ -77,7 +78,8 @@ import {DialogContentExample, DialogContentExampleDialog} from './dialog/dialog-
         MatIconModule,
         RouterModule,
         ReactiveFormsModule,
-        MatDialogModule
+        MatDialogModule,
+        MatSliderModule
 
     ],
   providers: [],

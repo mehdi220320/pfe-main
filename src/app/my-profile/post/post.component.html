@@ -1,6 +1,13 @@
 <div class="post-container">
-    <div style="width:60%">
-        <img [src]="post.imagesUploads[0].url" style="width:99%;height:100%;border-top-right-radius:20px 20px" alt="">
+    <div class="slider-wrapper" *ngIf="post.imagesUploads.length!==0">
+        <div class="slider">
+            <div  id="slide{{i}}" class="slider-view" *ngFor="let file of post.imagesUploads;let i=index">
+                <img [src]="file.url" class="post-img">
+            </div>
+            <mat-slider>
+                <input matSliderThumb>
+            </mat-slider>
+        </div>
     </div>
     <div style="width:40%">
         <div class="user-profile">

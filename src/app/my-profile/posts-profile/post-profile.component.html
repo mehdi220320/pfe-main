@@ -13,21 +13,73 @@
         </div>
     </div>
     <p class="post-text">{{post.textareaContent}} </p>
-    <div *ngIf="post.imagesUploads.length!==0">
-        <div *ngFor="let file of post.imagesUploads;" >
-            <img [src]="file.url" class="post-img">
-        </div>
-    </div>
-    <div class="slider-wrapper">
-        <div class="slider">
-            <div  [id]="file.url" class="slider-view" *ngFor="let file of post.imagesUploads;">
-                <img [src]="file.url" class="post-img">
+    <!--
+        <section class="section-bar">
+            <div class="slider">
+                <div class="slide">
+                    <input (click)="slideTo(1)" type="radio" name="radio-btn" id="radio1" #radio1>
+                    <input (click)="slideTo(2)" type="radio" name="radio-btn" id="radio2" #radio2>
+                    <input (click)="slideTo(3)" type="radio" name="radio-btn" id="radio3" #radio3>
+                    <input (click)="slideTo(4)" type="radio" name="radio-btn" id="radio4" #radio4>
+                    <div class="st first st1" >
+                        <img src="../../../assets/imgs/sliderbar/apropos.png" >
+                    </div>
+                    <div class="st st2" >
+                        <img src="../../../assets/imgs/sliderbar/artist.png" >
+
+                    </div>
+                    <div class="st st3" >
+                            <img src="../../../assets/imgs/2502606-removebg-preview.png"  >
+                    </div>
+
+                    <div class="st " >
+                        <img src="../../../assets/imgs/2502606-removebg-preview.png"  >
+                    </div>
+                    <div class="nav-auto">
+                        <div class="a-b1"></div>
+                        <div class="a-b2"></div>
+                        <div class="a-b3"></div>
+                        <div class="a-b4"></div>
+                    </div>
+
+                </div>
+                <div class="nav-m">
+                    <label for="radio1" class="m-btn"></label>
+                    <label for="radio2" class="m-btn"></label>
+                    <label for="radio3" class="m-btn"></label>
+                    <label for="radio4" class="m-btn"></label>
+                </div>
+            </div>
+        </section -->
+            <div class="slider-wrapper" *ngIf="post.imagesUploads.length!==0">
+                <div class="slider">
+                    <div  id="slide{{i}}" class="slider-view" *ngFor="let file of post.imagesUploads;let i=index">
+                        <img [src]="file.url" class="post-img">
+                    </div>
+                    <mat-slider>
+                        <input matSliderThumb>
+                    </mat-slider>
+                </div>
+
+            </div>
+   <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators" *ngFor="let file of post.imagesUploads;let i=index">
+            <li data-target="#carouselExampleIndicators" [attr.data-slide-to]="i" [ngClass]="{'active': i === 0}"></li>
+        </ol>
+        <div class="carousel-inner" *ngFor="let file of post.imagesUploads;let i=index">
+            <div [ngClass]="{'active': i === 0 ,'carousel-item':true}" >
+                <img [src]="file.url" class="d-block w-100" alt="...">
             </div>
         </div>
-        <div class="slider-nav">
-            <a href="#{{file.url}}" *ngFor="let file of post.imagesUploads;"></a>
-        </div>
-    </div>
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </button>
+    </div>-->
 
     <div class="post-row">
         <div class="activity-icons">
