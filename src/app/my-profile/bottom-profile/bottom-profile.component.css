@@ -10,3 +10,7 @@
 .info-post{
     flex-basis: 65%;
 }
+@media screen and (max-width: 700px) {
+    .profile-info{
+        display: inline-block;}
+}
