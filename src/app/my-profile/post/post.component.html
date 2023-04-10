@@ -4,9 +4,6 @@
             <div  id="slide{{i}}" class="slider-view" *ngFor="let file of post.imagesUploads;let i=index">
                 <img [src]="file.url" class="post-img">
             </div>
-            <mat-slider>
-                <input matSliderThumb>
-            </mat-slider>
         </div>
     </div>
     <div style="width:40%">
@@ -27,7 +24,7 @@
         <div class="post-row">
             <div class="activity-icons">
                 <div> <button class="button"><img src="assets/imgs/profile/like.png" (click)="addLike(post.id)"  style="cursor: pointer"  ></button>{{post.likes}} </div>
-                <div> <img src="assets/imgs/profile/comment.png" >75</div>
+                <div> <img src="assets/imgs/profile/comment.png" >{{comments.length}}</div>
                 <div> <img src="assets/imgs/profile/view.png" >1,5000</div>
             </div>
             <div class="post-profile-icons">

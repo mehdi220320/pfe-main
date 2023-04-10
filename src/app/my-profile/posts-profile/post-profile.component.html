@@ -51,18 +51,7 @@
                 </div>
             </div>
         </section -->
-            <div class="slider-wrapper" *ngIf="post.imagesUploads.length!==0">
-                <div class="slider">
-                    <div  id="slide{{i}}" class="slider-view" *ngFor="let file of post.imagesUploads;let i=index">
-                        <img [src]="file.url" class="post-img">
-                    </div>
-                    <mat-slider>
-                        <input matSliderThumb>
-                    </mat-slider>
-                </div>
-
-            </div>
-   <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators" *ngFor="let file of post.imagesUploads;let i=index">
             <li data-target="#carouselExampleIndicators" [attr.data-slide-to]="i" [ngClass]="{'active': i === 0}"></li>
         </ol>
@@ -80,11 +69,17 @@
             <span class="sr-only">Next</span>
         </button>
     </div>-->
-
+            <div class="slider-wrapper" *ngIf="post.imagesUploads.length!==0">
+                <div class="slider">
+                    <div  id="slide{{i}}" class="slider-view" *ngFor="let file of post.imagesUploads;let i=index">
+                        <img [src]="file.url" class="post-img">
+                    </div>
+                </div>
+            </div>
     <div class="post-row">
         <div class="activity-icons">
             <div> <button class="button"><img src="assets/imgs/profile/like.png" (click)="addLike(post.id)"  style="cursor: pointer"  ></button>{{post.likes}} </div>
-            <div> <img src="assets/imgs/profile/comment.png" >75</div>
+            <div> <img src="assets/imgs/profile/comment.png" >{{comments.length}}</div>
             <div> <img src="assets/imgs/profile/view.png" >1,5000</div>
         </div>
         <div class="post-profile-icons">
