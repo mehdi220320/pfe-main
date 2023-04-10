@@ -33,9 +33,9 @@ const routes: Routes = [
     path: 'myprofile',
     component: MyProfileComponent,
     children: [
-      { path: 'gallery', redirectTo: 'myprofile', pathMatch: 'full' },
-      {path: 'posts', component:BottomProfileComponent},
-      {path: 'gallery', component:GallerieComponent},
+      { path: '', redirectTo: 'posts', pathMatch: 'full' },
+      { path: 'posts', component: BottomProfileComponent },
+      { path: 'gallery', component: GallerieComponent },
     ]
   }
 ];
